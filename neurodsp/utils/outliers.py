@@ -100,7 +100,7 @@ def discard_outliers(data, outlier_percent):
         raise ValueError('Outlier removal would discard all data. Can not proceed.')
 
     if n_discard == 0:
-        return data.copy()
+        return data
 
     # Make 2D -> 3D for looping across array
     data = data[np.newaxis, :, :] if data.ndim == 2 else data
